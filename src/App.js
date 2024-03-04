@@ -20,7 +20,7 @@ const Leaderboard = () => {
       const teams = jsonData.slice(1).map((row, index) => ({
         id: index + 1,
         name: row[0],
-        points: parseInt(row[1], 10),
+        points: parseFloat(row[1]), // Parse as float instead of integer
       }));
 
       setTeamData(teams);
@@ -62,7 +62,7 @@ const Leaderboard = () => {
                   {team.name}
                 </td>
                 <td className="py-2 px-4 text-gray-800 font-semibold">
-                  {team.points}
+                  {team.points.toFixed(2)} {/* Display points with two decimal places */}
                 </td>
               </tr>
             ))}
@@ -74,7 +74,3 @@ const Leaderboard = () => {
 };
 
 export default Leaderboard;
-
-
-
-
