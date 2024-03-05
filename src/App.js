@@ -42,14 +42,14 @@ const Leaderboard = () => {
     >
       <div className="bg-[#748386]/35 backdrop-blur-xl rounded-lg shadow-2xl p-8">
         <h1 className="text-4xl font-semibold mb-4 text-white text-center">
-          Points Table
+          Round 2 Leaderboard
         </h1>
         <table className="w-full border-collapse border border-gray-800 mt-4 bg-white rounded-lg shadow-lg mx-auto">
           <thead>
             <tr className="bg-gray-200">
               <th className="py-2 px-4 border-r">Rank</th>
               <th className="py-2 px-4 border-r">Team Name</th>
-              <th className="py-2 px-4">Points</th>
+              <th className="py-2 px-4">Time(secs)</th>
             </tr>
           </thead>
           <tbody>
