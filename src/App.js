@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import * as XLSX from "xlsx";
 import "./index.css";
-import bg from "./bg.svg";
+import bg from "./bg.jpg";
 
 import excelData from "./leaderboard.xlsx";
 
@@ -20,7 +20,7 @@ const Leaderboard = () => {
       const teams = jsonData.slice(1).map((row, index) => ({
         id: index + 1,
         name: row[0],
-        points: parseFloat(row[1]), // Parse as float instead of integer
+        points: parseFloat(row[1]), 
       }));
 
       setTeamData(teams);
@@ -40,7 +40,7 @@ const Leaderboard = () => {
         backgroundRepeat: "repeat", // Add this line for background repeat
       }}
     >
-      <div className="bg-primary rounded-lg shadow-2xl p-8">
+      <div className="bg-[#748386]/35 backdrop-blur-xl rounded-lg shadow-2xl p-8">
         <h1 className="text-4xl font-semibold mb-4 text-white text-center">
           Points Table
         </h1>
@@ -54,7 +54,7 @@ const Leaderboard = () => {
           </thead>
           <tbody>
             {sortedTeams.map((team, index) => (
-              <tr key={team.id} className="border-t">
+              <tr key={team.id} className="border-t ">
                 <td className="py-2 px-4 border-r text-gray-800 font-semibold">
                   {index + 1}
                 </td>
